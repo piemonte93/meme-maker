@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Maker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas></canvas>
+    <input type="range" id="line-width" min="1" max="10" value="5" step="0.1" />
+    <input type="color" id="color">
+    <div>
+        <div class="color-option" style="background-color: #9c88ff;" data-color="#9c88ff"></div>
+        <div class="color-option" style="background-color: #fbc531;" data-color="#fbc531"></div>
+        <div class="color-option" style="background-color: #4cd137;" data-color="#4cd137"></div>
+        <div class="color-option" style="background-color: #487eb0;" data-color="#487eb0"></div>
+        <div class="color-option" style="background-color: #f53b57;" data-color="#f53b57"></div>
+        <div class="color-option" style="background-color: #3c40c6;" data-color="#3c40c6"></div>
+        <div class="color-option" style="background-color: #0fbcf9;" data-color="#0fbcf9"></div>
+        <div class="color-option" style="background-color: #00d8d6;" data-color="#00d8d6"></div>
+        <div class="color-option" style="background-color: #05c46b;" data-color="#05c46b"></div>
+        <div class="color-option" style="background-color: #0097e6;" data-color="#0097e6"></div>
+    </div>
+    <!-- 태그 내에 data-를 입력하고 뒤에 원하는 변수명을 지정해주면 해당 변수명에 문자열 데이터를 저장할 수 있다. 개발자 도구에서 console.dir(dataset)을 통해 확인할 수 있다. -->
+    <button id="mode-btn">Fill</button>
+    <button id="destroy-btn">Destroy</button>
+    <button id="eraser-btn">Eraser</button>
+    <input type="file" accept="image/*" id="file"/>
+    <!-- accept="image/*" 이미지 파일만 업로드 가능 -->
+    <input type="text" placeholder="Write and then double click" id="text">
+    <button id="save-btn">Save image</button>
+    <script src="app.js"></script>
+  </body>
+</html>
+<!-- Canvas API
+    Javascript로 그래픽을 그릴 수 있게 해주는 API
+    WebGL API로 2D 그래픽이나 3D 그래픽을 그릴 수 있다.
+    HTML로 할 일이 거의 없음
+-->
